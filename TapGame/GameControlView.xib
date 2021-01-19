@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GameControlViewClass" customModule="TapGame" customModuleProvider="target">
+            <connections>
+                <outlet property="actionButton" destination="ZO7-3p-md1" id="Nd6-Q7-cZ9"/>
+                <outlet property="stepper" destination="l0e-7V-XHr" id="g4b-p2-qJ8"/>
+                <outlet property="timeLabel" destination="7Yv-AA-uJk" id="biC-4w-bic"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="455" height="190"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZO7-3p-md1">
+                    <rect key="frame" x="210.5" y="96" width="34" height="60"/>
+                    <state key="normal" title="Start"/>
+                    <connections>
+                        <action selector="actionButtonTapped:" destination="-1" eventType="touchUpInside" id="sRt-5Q-ybK"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time: 30 seconds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Yv-AA-uJk">
+                    <rect key="frame" x="0.0" y="4" width="137" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="30" maximumValue="100" stepValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="l0e-7V-XHr">
+                    <rect key="frame" x="361" y="0.0" width="94" height="32"/>
+                    <connections>
+                        <action selector="stepperChanged:" destination="-1" eventType="valueChanged" id="Enr-Fr-6Ex"/>
+                    </connections>
+                </stepper>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="ZO7-3p-md1" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="12x-DM-23C"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="ZO7-3p-md1" secondAttribute="bottom" id="1FB-xf-Brd"/>
+                <constraint firstItem="ZO7-3p-md1" firstAttribute="top" secondItem="l0e-7V-XHr" secondAttribute="bottom" constant="64" id="1SX-Fa-hWg"/>
+                <constraint firstItem="7Yv-AA-uJk" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="A9t-3D-Ded"/>
+                <constraint firstItem="l0e-7V-XHr" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="7Yv-AA-uJk" secondAttribute="trailing" constant="8" symbolic="YES" id="IOY-HC-DzR"/>
+                <constraint firstItem="7Yv-AA-uJk" firstAttribute="centerY" secondItem="l0e-7V-XHr" secondAttribute="centerY" id="Ibq-eH-u3e"/>
+                <constraint firstAttribute="trailing" secondItem="l0e-7V-XHr" secondAttribute="trailing" id="bFH-jT-V23"/>
+                <constraint firstItem="7Yv-AA-uJk" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="4" id="gRp-Pd-xt6"/>
+                <constraint firstItem="l0e-7V-XHr" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="uQI-dk-WzF"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="226.81159420289856" y="-88.392857142857139"/>
+        </view>
+    </objects>
+</document>
